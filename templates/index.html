@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLima Blog</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechLima Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#artigos">Artigos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Bem-vindo ao TechLima!</h2>
+                <p>O seu portal de tecnologia, programação e inovação.</p>
+            </div>
+        </section>
+
+        <section id="artigos" class="articles">
+            <div class="container">
+                <h2>Últimos Artigos</h2>
+                <div class="article">
+                    <img src="https://via.placeholder.com/150" alt="Imagem do artigo">
+                    <div class="article-content">
+                        <h3>Como começar com Flask</h3>
+                        <p>Descubra o básico para iniciar no desenvolvimento web com Flask, um framework poderoso e simples.</p>
+                        <a href="#">Leia mais</a>
+                    </div>
+                </div>
+                <div class="article">
+                    <img src="https://via.placeholder.com/150" alt="Imagem do artigo">
+                    <div class="article-content">
+                        <h3>Dicas para aprender programação</h3>
+                        <p>Dicas práticas e eficazes para quem quer se tornar um programador profissional.</p>
+                        <a href="#">Leia mais</a>
+                    </div>
+                </div>
+                <div class="article">
+                    <img src="https://via.placeholder.com/150" alt="Imagem do artigo">
+                    <div class="article-content">
+                        <h3>Inovação no mundo da IA</h3>
+                        <p>Veja como a inteligência artificial está moldando o futuro e impactando nossas vidas.</p>
+                        <a href="#">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="about">
+            <div class="container">
+                <h2>Sobre o TechLima</h2>
+                <p>O TechLima é um blog dedicado a compartilhar conhecimento sobre tecnologia, programação e inovação. Nosso objetivo é informar e inspirar desenvolvedores e entusiastas da área.</p>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <form>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TechLima. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
