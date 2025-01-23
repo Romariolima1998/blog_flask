@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLima Blog</title>
+    <link rel="stylesheet" href=' {{url_for("static", filename="css/index.css")}}'>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechLima Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#artigos">Artigos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Bem-vindo ao TechLima!</h2>
+                <p>O seu portal de tecnologia, programação e inovação.</p>
+            </div>
+        </section>
+
+        <section id="artigos" class="articles">
+            <div class="container">
+                <h2>Últimos Artigos</h2>
+
+                {% for post in posts %}
+
+                    <div class="article">
+
+                        {% if post.imagem %}
+                            <img src=" {{url_for('static', filename=post.imagem)}}" alt="Imagem do artigo">
+                        {% endif %}
+                        
+                        <div class="article-content">
+                            <h3>{{post.title}}</h3>
+                            <p>{{post.description}}</p>
+                            <a href="{{url_for('post.detail', id=post.id)}}">Leia mais</a>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </section>
+
+        <section id="sobre" class="about">
+            <div class="container">
+                <h2>Sobre o TechLima</h2>
+                <p>O TechLima é um blog dedicado a compartilhar conhecimento sobre tecnologia, programação e inovação. Nosso objetivo é informar e inspirar desenvolvedores e entusiastas da área.</p>
+            </div>
+        </section>
+
+    
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TechLima. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
