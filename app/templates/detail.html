@@ -1,24 +1,8 @@
+{% extends "partials/base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Post - TechLima</title>
-    <link rel="stylesheet" href="detail.css">
-    <link rel="stylesheet" href=' {{url_for("static", filename="css/index.css")}}'>
-</head>
-<body>
-    <header>
-        <h1>TechLima</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+{% block content %}
+
+    {% include "partials/nav.html" %}
 
     <div class="container">
         <article class="post-detail">
@@ -36,8 +20,6 @@
         </article>
     </div>
 
-    <footer>
-        <p>&copy; 2025 TechLima. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
+    {% include "partials/footer.html" %}
+
+{% endblock content %}

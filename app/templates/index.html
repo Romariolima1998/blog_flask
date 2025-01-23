@@ -1,25 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechLima Blog</title>
-    <link rel="stylesheet" href=' {{url_for("static", filename="css/index.css")}}'>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>TechLima Blog</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#artigos">Artigos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+{% extends "partials/base.html" %}
+
+
+
+{% block content %}
+
+    {% include "partials/nav.html" %}
 
     <main>
         <section class="hero">
@@ -62,10 +47,6 @@
     
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 TechLima. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-</body>
-</html>
+    {% include "partials/footer.html" %}
+
+{% endblock content %}
